@@ -1,4 +1,4 @@
-module github.com/hemkit777/binddns-operator/binddns-operator
+module github.com/hemkit777/binddns-operator
 
 go 1.14
 
