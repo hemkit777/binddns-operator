@@ -13,14 +13,14 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/bind-dns/binddns-operator/pkg/controller/queue"
-	"github.com/bind-dns/binddns-operator/pkg/controller/router"
-	dnsinformers "github.com/bind-dns/binddns-operator/pkg/generated/informers/externalversions"
-	dnslister "github.com/bind-dns/binddns-operator/pkg/generated/listers/binddns/v1"
-	"github.com/bind-dns/binddns-operator/pkg/utils"
+	"github.com/hemkit777/binddns-operator/pkg/controller/queue"
+	"github.com/hemkit777/binddns-operator/pkg/controller/router"
+	dnsinformers "github.com/hemkit777/binddns-operator/pkg/generated/informers/externalversions"
+	dnslister "github.com/hemkit777/binddns-operator/pkg/generated/listers/binddns/v1"
+	"github.com/hemkit777/binddns-operator/pkg/utils"
 
-	"github.com/bind-dns/binddns-operator/pkg/kube"
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
+	"github.com/hemkit777/binddns-operator/pkg/kube"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
 )
 
 type DnsController struct {

@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	internalinterfaces "github.com/bind-dns/binddns-operator/pkg/generated/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/hemkit777/binddns-operator/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

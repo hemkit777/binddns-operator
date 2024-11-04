@@ -12,10 +12,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 
-	v1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
-	"github.com/bind-dns/binddns-operator/pkg/kube"
-	"github.com/bind-dns/binddns-operator/pkg/utils"
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
+	v1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
+	"github.com/hemkit777/binddns-operator/pkg/kube"
+	"github.com/hemkit777/binddns-operator/pkg/utils"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
 )
 
 var (

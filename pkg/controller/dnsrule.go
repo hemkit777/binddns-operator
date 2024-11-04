@@ -7,11 +7,11 @@ import (
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	binddnsv1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
-	"github.com/bind-dns/binddns-operator/pkg/controller/queue"
-	k8sstatus "github.com/bind-dns/binddns-operator/pkg/controller/status"
-	"github.com/bind-dns/binddns-operator/pkg/kube"
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
+	binddnsv1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
+	"github.com/hemkit777/binddns-operator/pkg/controller/queue"
+	k8sstatus "github.com/hemkit777/binddns-operator/pkg/controller/status"
+	"github.com/hemkit777/binddns-operator/pkg/kube"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
 )
 
 type dnsRuleEventHandler struct {

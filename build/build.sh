@@ -13,7 +13,7 @@ GOVERSION=$(go version)
 BUILDTIME=$(date "+%Y-%m-%d %H:%M:%S")
 
 # set package name.
-PACKAGE="github.com/bind-dns/${REPONAME}"
+PACKAGE="github.com/hemkit777/${REPONAME}"
 
 LDFLAGS="-s -w -X '${PACKAGE}/version.APPNAME=${APPNAME}' -X '${PACKAGE}/version.REVISION=${REVISION}' -X '${PACKAGE}/version.BRANCH=${BRANCH}' -X '${PACKAGE}/version.TAG=${TAG}' -X '${PACKAGE}/version.GOVERSION=${GOVERSION}' -X '${PACKAGE}/version.BUILDTIME=${BUILDTIME}' -X '${PACKAGE}/version.BINDVERSION=${BINDVERSION}'"
 

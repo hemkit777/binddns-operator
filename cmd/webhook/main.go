@@ -1,6 +1,6 @@
 package main
 
-import "github.com/bind-dns/binddns-operator/cmd/webhook/app"
+import "github.com/hemkit777/binddns-operator/cmd/webhook/app"
 
 func main() {
 	c := app.NewCommand()

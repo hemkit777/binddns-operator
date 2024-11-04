@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	v1 "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1"
+	v1 "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

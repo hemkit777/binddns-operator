@@ -19,8 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	v1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
-	"github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned/scheme"
+	v1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
+	"github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

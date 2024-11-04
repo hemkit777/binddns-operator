@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	binddnsv1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
+	binddnsv1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

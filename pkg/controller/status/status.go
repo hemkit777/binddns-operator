@@ -5,9 +5,9 @@ import (
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	binddnsv1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
-	"github.com/bind-dns/binddns-operator/pkg/kube"
-	"github.com/bind-dns/binddns-operator/pkg/utils"
+	binddnsv1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
+	"github.com/hemkit777/binddns-operator/pkg/kube"
+	"github.com/hemkit777/binddns-operator/pkg/utils"
 )
 
 func UpdateDomainStatus(zone string, status binddnsv1.DomainStatus) error {

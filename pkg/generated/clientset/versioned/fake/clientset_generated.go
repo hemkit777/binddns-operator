@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned"
-	binddnsv1 "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1"
-	fakebinddnsv1 "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1/fake"
+	clientset "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned"
+	binddnsv1 "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1"
+	fakebinddnsv1 "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

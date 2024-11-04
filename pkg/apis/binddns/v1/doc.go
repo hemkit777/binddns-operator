@@ -15,4 +15,4 @@ limitations under the License.
 // +groupName=binddns.github.com
 
 // Package v1 is the v1 version of the API.
-package v1 // import "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
+package v1 // import "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"

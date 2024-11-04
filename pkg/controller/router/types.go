@@ -9,7 +9,7 @@ import (
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
 
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
 )
 
 type HttpServer struct {

@@ -18,7 +18,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/bind-dns/binddns-operator/pkg/apis/binddns"
+	"github.com/hemkit777/binddns-operator/pkg/apis/binddns"
 )
 
 // SchemeGroupVersion is group version used to register these objects

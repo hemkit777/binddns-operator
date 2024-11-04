@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned"
-	binddns "github.com/bind-dns/binddns-operator/pkg/generated/informers/externalversions/binddns"
-	internalinterfaces "github.com/bind-dns/binddns-operator/pkg/generated/informers/externalversions/internalinterfaces"
+	versioned "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned"
+	binddns "github.com/hemkit777/binddns-operator/pkg/generated/informers/externalversions/binddns"
+	internalinterfaces "github.com/hemkit777/binddns-operator/pkg/generated/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

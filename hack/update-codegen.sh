@@ -26,11 +26,11 @@ CODEGEN_PKG=${CODEGEN_PKG:-$(cd "${SCRIPT_ROOT}"; ls -d -1 ./vendor/k8s.io/code-
 #                  k8s.io/kubernetes. The output-base is needed for the generators to output into the vendor dir
 #                  instead of the $GOPATH directly. For normal projects this can be dropped.
 bash "${CODEGEN_PKG}"/generate-groups.sh "deepcopy,client,informer,lister" \
-  github.com/bind-dns/binddns-operator/pkg/generated github.com/bind-dns/binddns-operator/pkg/apis \
+  github.com/hemkit777/binddns-operator/pkg/generated github.com/hemkit777/binddns-operator/pkg/apis \
   binddns:v1 \
   --go-header-file "${SCRIPT_ROOT}"/hack/boilerplate.go.txt
 
 #bash "${CODEGEN_PKG}"/generate-groups.sh "deepcopy,client,informer,lister" \
-#  github.com/bind-dns/binddns-operator/pkg/generated/dnsrule github.com/bind-dns/binddns-operator/pkg/apis \
+#  github.com/hemkit777/binddns-operator/pkg/generated/dnsrule github.com/hemkit777/binddns-operator/pkg/apis \
 #  dnsrule:v1 \
 #  --go-header-file "${SCRIPT_ROOT}"/hack/boilerplate.go.txt

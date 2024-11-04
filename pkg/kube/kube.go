@@ -8,7 +8,7 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
 
-	dnsclientset "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned"
+	dnsclientset "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned"
 )
 
 var (

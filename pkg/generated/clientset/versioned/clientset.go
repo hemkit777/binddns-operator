@@ -21,7 +21,7 @@ package versioned
 import (
 	"fmt"
 
-	binddnsv1 "github.com/bind-dns/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1"
+	binddnsv1 "github.com/hemkit777/binddns-operator/pkg/generated/clientset/versioned/typed/binddns/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

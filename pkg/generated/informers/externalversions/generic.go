@@ -21,7 +21,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
+	v1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )

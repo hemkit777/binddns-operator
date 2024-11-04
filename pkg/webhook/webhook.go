@@ -11,7 +11,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
 )
 
 type AdmissionWebhookServer struct {

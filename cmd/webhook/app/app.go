@@ -5,11 +5,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/bind-dns/binddns-operator/pkg/kube"
-	"github.com/bind-dns/binddns-operator/pkg/utils"
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
-	"github.com/bind-dns/binddns-operator/pkg/webhook"
-	"github.com/bind-dns/binddns-operator/version"
+	"github.com/hemkit777/binddns-operator/pkg/kube"
+	"github.com/hemkit777/binddns-operator/pkg/utils"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
+	"github.com/hemkit777/binddns-operator/pkg/webhook"
+	"github.com/hemkit777/binddns-operator/version"
 )
 
 var (

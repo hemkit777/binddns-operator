@@ -10,9 +10,9 @@ import (
 
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"
 
-	binddnsv1 "github.com/bind-dns/binddns-operator/pkg/apis/binddns/v1"
-	"github.com/bind-dns/binddns-operator/pkg/kube"
-	zlog "github.com/bind-dns/binddns-operator/pkg/utils/zaplog"
+	binddnsv1 "github.com/hemkit777/binddns-operator/pkg/apis/binddns/v1"
+	"github.com/hemkit777/binddns-operator/pkg/kube"
+	zlog "github.com/hemkit777/binddns-operator/pkg/utils/zaplog"
 )
 
 type DnsDomainRequest struct {

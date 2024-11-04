@@ -19,8 +19,8 @@ limitations under the License.
 package binddns
 
 import (
-	v1 "github.com/bind-dns/binddns-operator/pkg/generated/informers/externalversions/binddns/v1"
-	internalinterfaces "github.com/bind-dns/binddns-operator/pkg/generated/informers/externalversions/internalinterfaces"
+	v1 "github.com/hemkit777/binddns-operator/pkg/generated/informers/externalversions/binddns/v1"
+	internalinterfaces "github.com/hemkit777/binddns-operator/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.
