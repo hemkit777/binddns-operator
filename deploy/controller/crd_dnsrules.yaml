@@ -65,10 +65,10 @@ spec:
             host:
               type: string
             mxPriority:
-              format: int32
+              format: int64
               type: integer
             ttl:
-              format: int32
+              format: int64
               type: integer
             type:
               type: string
