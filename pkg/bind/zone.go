@@ -44,6 +44,7 @@ func (handler *DnsHandler) initAllZones(ctx context.Context) (err error) {
 // ZoneAdd used to add a zone.
 func (handler *DnsHandler) ZoneAdd(zone string) error {
 	ctx := context.Background()
+        zlog.Infof("%s ZoneAdd", domain)
 	domain, err := kube.GetKubeClient().GetDnsClientSet().BinddnsV1().DnsDomains().Get(ctx, zone, v1.GetOptions{})
 	if err != nil {
 		zlog.Error(err)
@@ -66,6 +67,7 @@ func (handler *DnsHandler) ZoneAdd(zone string) error {
 func (handler *DnsHandler) ZoneUpdate(zone string) error {
 	ctx := context.Background()
 	domain, err := kube.GetKubeClient().GetDnsClientSet().BinddnsV1().DnsDomains().Get(ctx, zone, v1.GetOptions{})
+        zlog.Infof("%s Test", domain)
 	if err != nil {
 		zlog.Error(err)
 		return err
