@@ -1,0 +1,22 @@
+---
+kind: DnsDomain
+apiVersion: binddns.github.com/v1
+metadata:
+  name: test.com
+spec:
+  enabled: true
+  remark: this is the remark
+
+---
+kind: DnsRule
+apiVersion: binddns.github.com/v1
+metadata:
+  name: test.com
+spec:
+  zone: test.com
+  enabled: true
+  host: www
+  type: A
+  data: 1.1.1.1
+  ttl: 60
+  mxPriority: 10

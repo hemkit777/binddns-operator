@@ -1,0 +1,12 @@
+kind: DnsRule
+apiVersion: binddns.github.com/v1
+metadata:
+  name: www.test.com
+spec:
+  zone: test.com
+  enabled: true
+  host: "www"
+  type: A
+  data: 1.1.1.1
+  ttl: 60
+  mxPriority: 10

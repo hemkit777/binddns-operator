@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: binddns-webhook
+  namespace: kube-system
+  labels:
+    app: binddns-webhook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: binddns-webhook
+  template:
+    metadata:
+      labels:
+        app: binddns-webhook
+    spec:
+      serviceAccount: binddns-sa
+      containers:
+        - name: binddns-webhook
+          image: pelin/binddns-webhook:v0.1.0
+          imagePullPolicy: IfNotPresent
+          command: ["/app/binddns-webhook"]
+          args:
+            - --tls-certfile=/etc/webhook/certs/cert.pem
+            - --tls-keyfile=/etc/webhook/certs/key.pem
+          volumeMounts:
+            - name: binddns-webhook-certs
+              mountPath: /etc/webhook/certs
+              readOnly: true
+      volumes:
+        - name: binddns-webhook-certs
+          secret:
+            secretName: binddns-webhook-certs
