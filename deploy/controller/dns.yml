@@ -1,9 +1,0 @@
----
-kind: DnsDomain
-apiVersion: binddns.github.com/v1
-metadata:
-  name: test.com
-spec:
-  enabled: true
-  remark: this is the remark
-
