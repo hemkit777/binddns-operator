@@ -67,7 +67,6 @@ func (handler *DnsHandler) ZoneAdd(zone string) error {
 func (handler *DnsHandler) ZoneUpdate(zone string) error {
 	ctx := context.Background()
 	domain, err := kube.GetKubeClient().GetDnsClientSet().BinddnsV1().DnsDomains().Get(ctx, zone, v1.GetOptions{})
-        zlog.Infof("%s Test", domain)
 	if err != nil {
 		zlog.Error(err)
 		return err
@@ -118,7 +117,7 @@ func (handler *DnsHandler) initZone(ctx context.Context, domain *binddnsv1.DnsDo
 	if domain.Spec.Enabled {
 		rules, err := kube.GetKubeClient().GetDnsClientSet().BinddnsV1().DnsRules().List(ctx, v1.ListOptions{
 			ResourceVersion: "0",
-			LabelSelector:   utils.LabelZoneDnsRule + "=" + domain.Name,
+			// LabelSelector:   utils.LabelZoneDnsRule + "=" + domain.Name,
 		})
 		if err != nil {
 			zlog.Error(err)
@@ -137,7 +136,6 @@ func (handler *DnsHandler) initZone(ctx context.Context, domain *binddnsv1.DnsDo
 			}
 			records = append(records, fmt.Sprintf("%s %d %s %s\n", strings.TrimSpace(item.Spec.Host),
 				item.Spec.Ttl, item.Spec.Type, item.Spec.Data))
-                        zlog.Infof("%s InitZone", records)
 		}
 	}
 

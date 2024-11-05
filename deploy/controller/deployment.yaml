@@ -24,6 +24,10 @@ spec:
         - name: bind-conf
           configMap:
             name: bind-conf
+        - name: binddns-start-script
+          configMap:
+            name: binddns-start-script
+            defaultMode: 0777
         - name: acl-dir
           emptyDir: {}
         - name: view-dir
@@ -73,15 +77,25 @@ spec:
             - name: view-dir
               mountPath: /etc/named/view
         - name: docker-bind
-          image: pelin/docker-bind:9.12.2
+          image: pelin/docker-bind-dlz:latest
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: bind-conf
               mountPath: /etc/named/named.conf
               subPath: named.conf
+            - name: binddns-start-script
+              mountPath: /start.sh
+              subPath: start.sh
             - name: acl-dir
               mountPath: /etc/named/acl
             - name: zone-dir
               mountPath: /etc/named/zone
             - name: view-dir
               mountPath: /etc/named/view
+          ports:
+           - containerPort: 9853
+             name: dns
+             protocol: UDP
+           - containerPort: 9853
+             name: dns-tcp
+             protocol: TCP

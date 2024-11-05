@@ -1,6 +1,6 @@
 
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
@@ -8,28 +8,6 @@ metadata:
   creationTimestamp: null
   name: dnsrules.binddns.github.com
 spec:
-  additionalPrinterColumns:
-    - JSONPath: .spec.zone
-      name: Zone
-      type: string
-    - JSONPath: .spec.enabled
-      name: Enabled
-      type: boolean
-    - JSONPath: .spec.host
-      name: Host
-      type: string
-    - JSONPath: .spec.type
-      name: Type
-      type: string
-    - JSONPath: .spec.data
-      name: Data
-      type: string
-    - JSONPath: .spec.ttl
-      name: Ttl
-      type: number
-    - JSONPath: .spec.mxPriority
-      name: MxPriority
-      type: number
   group: binddns.github.com
   names:
     kind: DnsRule
@@ -37,10 +15,37 @@ spec:
     plural: dnsrules
     singular: dnsrule
   scope: Cluster
-  subresources:
-    status: {}
-  validation:
-    openAPIV3Schema:
+  versions: v1
+  versions:
+  - name: v1
+    additionalPrinterColumns:
+    - jsonPath: .spec.zone
+      name: Zone
+      type: string
+    - jsonPath: .spec.enabled
+      name: Enabled
+      type: boolean
+    - jsonPath: .spec.host
+      name: Host
+      type: string
+    - jsonPath: .spec.type
+      name: Type
+      type: string
+    - jsonPath: .spec.data
+      name: Data
+      type: string
+    - jsonPath: .spec.ttl
+      name: Ttl
+      type: number
+    - jsonPath: .spec.mxPriority
+      name: MxPriority
+      type: number
+    served: true
+    storage: true
+    subresources:
+     status: {}
+    schema:
+     openAPIV3Schema:
       properties:
         apiVersion:
           description: 'APIVersion defines the versioned schema of this representation
@@ -52,9 +57,6 @@ spec:
             object represents. Servers may infer this from the endpoint the client
             submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
           type: string
-        metadata:
-          description: Standard object metadata.
-          type: object
         spec:
           description: Specification of the desired behavior of the DnsRule.
           properties:
@@ -85,19 +87,17 @@ spec:
         status:
           description: Most recently observed status of the DnsRule.
           properties:
+            name:
+              type: string
             createTime:
               type: string
             updateTime:
               type: string
           type: object
       required:
+        - metadata
         - spec
       type: object
-  version: v1
-  versions:
-    - name: v1
-      served: true
-      storage: true
 status:
   acceptedNames:
     kind: ""
